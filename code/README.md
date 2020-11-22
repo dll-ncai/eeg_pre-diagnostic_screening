@@ -13,5 +13,5 @@ The NME Scalp EEG Dataset: An Open-Source Annotated Dataset of Healthy and Patho
 The shallow and Deep CNN experiments are built on example provided for BrainDecode by ‪Robin Tibor Schirrmeister here
 https://github.com/robintibor/auto-eeg-diagnosis-example
 
-Also lstm implementation contain pieces of code from the following package:
+Also chrononet experiments are based on implementation from the following package:
 Kunal Patel et al: https://github.com/kunalpatel1793/Neural-Nets-Final-Project
