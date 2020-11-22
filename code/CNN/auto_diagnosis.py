@@ -1,3 +1,11 @@
+
+/***************************************************************************************
+*    Title: auto-eeg-diagnosis-example
+*    Author: Robin T. Schirrmeister
+*    Date: Oct 25, 2017
+*    Availability: https://github.com/robintibor/auto-eeg-diagnosis-example
+*
+***************************************************************************************/
 import logging
 import time
 from copy import copy
@@ -369,31 +377,5 @@ if __name__ == "__main__":
 
     log.info("Experiment runtime: {:.2f} sec".format(run_time))
     th.save(exp.model.state_dict(), 'model/shallow.pt')
-    # exp.model.squeeze = Identity()
-    # exp.model.pool_nonlin_4 = Identity()
-    # exp.model.conv_classifier = Identity()
-    # exp.model.softmax = Identity()
-    # exp.model.squeeze = Identity()
-    # log.info("Model:\n{:s}".format(str(exp.model)))
-    # # In case you want to recompute predictions for further analysis:
-    # exp.model.eval()
-    # for setname in ('train', 'valid', 'test'):
-    #     log.info("Compute predictions for {:s}...".format(
-    #         setname))
-    #     dataset = exp.datasets[setname]
-    #     if config.cuda:
-    #         preds_per_batch = [var_to_np(exp.model(np_to_var(b[0]).cuda()))
-    #                   for b in exp.iterator.get_batches(dataset, shuffle=False)]
-    #     else:
-    #         preds_per_batch = [var_to_np(exp.model(np_to_var(b[0])))
-    #                   for b in exp.iterator.get_batches(dataset, shuffle=False)]
-    #     preds_per_trial = compute_preds_per_trial(
-    #         preds_per_batch, dataset,
-    #         input_time_length=exp.iterator.input_time_length,
-    #         n_stride=exp.iterator.n_preds_per_input)
-    #     mean_preds_per_trial = [np.mean(preds, axis=(0, 2)) for preds in
-    #                                 preds_per_trial]
-    #     mean_preds_per_trial = np.array(mean_preds_per_trial)
-    #     scipy.io.savemat("{:s}_sec_deep.mat".format(setname), {'seq': mean_preds_per_trial})
-
+   
 
