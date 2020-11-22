@@ -1,3 +1,6 @@
+/********
+*Author: Rahat Ul Ain
+*********/
 import numpy as np
 import h5py
 import tensorflow as tf
@@ -9,20 +12,16 @@ from sklearn.metrics import confusion_matrix
 from sklearn.preprocessing import StandardScaler
 from keras.layers import Flatten
 from keras.layers import Dropout
-from keras.layers import Convolution2D
-from keras.layers import BatchNormalization
-from keras.layers import MaxPooling2D
 from keras.models import load_model
 from keras.utils import multi_gpu_model
 from keras.callbacks import ModelCheckpoint
 from keras.callbacks import EarlyStopping
 from keras.optimizers import Adam
 print('starting')
-
+#load mat files with features
 file_path1 = 'tr_feat.mat'
 A01T = h5py.File(file_path1,'r')
 tr_data = np.copy(A01T['x'])          #............
-#tr_data = np.swapaxes(tr_data, 1,2)            #comment it for final run
 tr_data = np.asarray(tr_data, dtype=np.float32)   #............
 print(tr_data.dtype)
 print(tr_data.shape)
@@ -59,14 +58,12 @@ model = Model(inputs=inputsin, outputs=predictions)
 model.compile(optimizer = 'adam', loss = 'categorical_crossentropy', metrics=['accuracy'])
 print(model.metrics_names)
 print(model.summary())
-#
-# # learning schedule callback
-# lrate = LearningRateScheduler(step_decay)
+
 
 # early stopping
 es = EarlyStopping(monitor='val_loss', min_delta=0.01, mode='min', verbose=1, patience=15)                          #patience
-mc = ModelCheckpoint('model_LSTM_1acc.hdf5', monitor='val_acc', mode='max', verbose=1, save_best_only=True)        #filepath (save model as)
-mces = ModelCheckpoint('model_LSTM_1loss.hdf5', monitor='val_loss', mode='min', verbose=1, save_best_only=True)      #filepath (save model as)
+mc = ModelCheckpoint('model_LSTM_acc.hdf5', monitor='val_acc', mode='max', verbose=1, save_best_only=True)        #filepath (save model as)
+mces = ModelCheckpoint('model_LSTM_loss.hdf5', monitor='val_loss', mode='min', verbose=1, save_best_only=True)      #filepath (save model as)
 from keras.callbacks import CSVLogger
 
 csv_logger = CSVLogger('LSTM.csv', append=True, separator=';')
