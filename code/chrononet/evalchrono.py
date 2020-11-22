@@ -1,3 +1,6 @@
+/*******************
+* Author: Rahat Ul Ain
+********************/
 from pdb import set_trace
 import mne
 import pandas as pd
