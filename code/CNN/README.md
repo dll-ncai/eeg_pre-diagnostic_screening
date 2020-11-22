@@ -1,5 +1,5 @@
 # EEG anomaly detection 
-  The expeiment uses NMT dataset for EEG classification using models based on Deep and Shallow CNN architechtures proposed by 
+  The expeiments use NMT dataset for EEG classification using models based on Deep and Shallow CNN architechtures proposed by 
   R. T. Schirrmeister et al in `Deep  learning  with  convolutional  neural  networks  for  EEG  decodingand  visualization`
 ## Run
 1. Modify config.py, especially correct data folders for your path..
