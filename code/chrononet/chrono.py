@@ -1,3 +1,8 @@
+/********************************************
+* Author: Rahat Ul Ain 
+* Based on chrononet implementation by Kunal Patel
+* location: https://github.com/kunalpatel1793/Neural-Nets-Final-Project
+********************************************/
 from pdb import set_trace
 import mne
 import pandas as pd
