@@ -1,3 +1,12 @@
+/***************************************************************************************
+*    Modified by: Rahat Ul Ain
+*    Original Source
+*    Title: auto-eeg-diagnosis-example
+*    Author: Robin T. Schirrmeister   
+*    Date: Oct 25, 2017
+*    Availability: https://github.com/robintibor/auto-eeg-diagnosis-example
+*
+***************************************************************************************/
 import logging
 import re
 import numpy as np
