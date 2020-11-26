@@ -8,6 +8,9 @@ The expeiment test generalizability of deep learning model on NMT dataset.
 ##
 
 ## Acknowledgement
-chrononet experiments are based on implementation by Kunal Patel et al available at
+chrononet experiments are based on implementation by Kunal Patel et al available at link below:
+
 https://github.com/kunalpatel1793/Neural-Nets-Final-Project
+
+
 [1] Roy, Subhrajit, Isabell Kiral-Kornek, and Stefan Harrer. "ChronoNet: a deep recurrent neural network for abnormal EEG identification." In Conference on Artificial Intelligence in Medicine in Europe, pp. 47-56. Springer, Cham, 2019.
