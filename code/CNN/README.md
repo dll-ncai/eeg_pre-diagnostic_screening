@@ -12,3 +12,4 @@
 1. Modify config.py, especially correct data folders for your path..
 2. Run with `python ./auto_diagnosis.py`
 ##
+[1] R. Schirrmeister, L. Gemein, K. Eggensperger, F. Hutter and T. Ball, "Deep learning with convolutional neural networks for decoding and visualization of EEG pathology," 2017 IEEE Signal Processing in Medicine and Biology Symposium (SPMB), Philadelphia, PA, 2017, pp. 1-7, doi: 10.1109/SPMB.2017.8257015.
