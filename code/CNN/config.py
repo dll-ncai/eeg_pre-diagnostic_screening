@@ -2,8 +2,8 @@
 # below these given folders
 # Folders should contain all normal and abnormal data files without duplications
 data_folders = [
-    'v2.0.0/normal',
-    'v2.0.0/abnormal']
+    'dataset/normal',
+    'dataset/abnormal']
 n_recordings = None  # set to an integer, if you want to restrict the set size
 sensor_types = ["EEG"]
 n_chans = 21
