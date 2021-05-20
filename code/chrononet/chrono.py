@@ -26,7 +26,6 @@ from tensorflow.keras.models import load_model
 from tensorflow.keras.utils import multi_gpu_model
 from tensorflow.keras.callbacks import ModelCheckpoint
 from tensorflow.keras.callbacks import EarlyStopping
-
 def readDatafromPath(path):
 
 	matrix= np.empty((15000, 22), dtype='f')
@@ -118,39 +117,40 @@ def readDatafromPath(path):
 		matrix=matrix[:,:,1:]
 	return matrix.astype('float32')
 
+import config
 print('starting')
-normal_eval = readDatafromPath(path = "normal/train")
-normal_eval_dim = normal_eval.shape[-1]
+normal_train = readDatafromPath(path = config.normaldir)
+normal_train_dim = normal_train.shape[-1]
 # print("normal original dim")
-# print(normal_eval_dim)
-normal_eval_zeros = np.zeros(normal_eval_dim)
+# print(normal_train_dim)
+normal_train_zeros = np.zeros(normal_train_dim)
 # print("zeros array dim")
-# print(normal_eval_zeros)
+# print(normal_train_zeros)
 
-abnormal_eval = readDatafromPath(path = "abnormal/train")
-abnormal_eval_dim = abnormal_eval.shape[-1]
-#print(abnormal_eval_dim)
-abnormal_eval_ones = np.ones(abnormal_eval_dim)
-#print(abnormal_eval_dim)
+abnormal_train = readDatafromPath(path = config.abnormaldir)
+abnormal_train_dim = abnormal_train.shape[-1]
+#print(abnormal_train_dim)
+abnormal_train_ones = np.ones(abnormal_train_dim)
+#print(abnormal_train_dim)
 
-eval_data = np.dstack((normal_eval, abnormal_eval))
-eval_label = np.append(normal_eval_zeros, abnormal_eval_ones)
+train_data = np.dstack((normal_train, abnormal_train))
+train_label = np.append(normal_train_zeros, abnormal_train_ones)
 
-eval_data = np.swapaxes(eval_data,0,2)
+train_data = np.swapaxes(train_data,0,2)
 
-bs,t,f = eval_data.shape
+bs,t,f = train_data.shape
 
 
-print(eval_data.shape)
-print(eval_label.shape)
-print(eval_data.dtype)
-print(eval_label.dtype)
-enc_labels = to_categorical(eval_label, num_classes=2)              
-eval_label= enc_labels
-print(eval_data.shape)
-print(eval_label.shape)
-print(eval_data.dtype)
-print(eval_label.dtype)
+print(train_data.shape)
+print(train_label.shape)
+print(train_data.dtype)
+print(train_label.dtype)
+enc_labels = to_categorical(train_label, num_classes=2)              
+train_label= enc_labels
+print(train_data.shape)
+print(train_label.shape)
+print(train_data.dtype)
+print(train_label.dtype)
 print('training labels have been loaded')
 
 # ----------------------CHRONONET Testing-----------------------
@@ -203,9 +203,9 @@ print(model.summary())
 
 # early stopping
 es = EarlyStopping(monitor='val_loss', min_delta=0.01, mode='min', verbose=1, patience=25)                          #patience
-mc = ModelCheckpoint('model3flipped_acc.hdf5', monitor='val_acc', mode='max', verbose=1, save_best_only=True)        #filepath (save model as)
-mces = ModelCheckpoint('model3flipped_loss.hdf5', monitor='val_loss', mode='min', verbose=1, save_best_only=True)      #filepath (save model as)
+mc = ModelCheckpoint('modelbest_acc.hdf5', monitor='val_acc', mode='max', verbose=1, save_best_only=True)        #filepath (save model as)
+mces = ModelCheckpoint('modelbest_loss.hdf5', monitor='val_loss', mode='min', verbose=1, save_best_only=True)      #filepath (save model as)
 
 # fit model
-hist=model.fit(eval_data,eval_label,validation_split=0.2,epochs=500,batch_size=32,verbose=1,callbacks=[es, mc,mces],shuffle=True) #epochs #split #
+hist=model.fit(train_data,train_label,validation_split=0.2,epochs=500,batch_size=32,verbose=1,callbacks=[es, mc,mces],shuffle=True) #epochs #split #
 print('The End')
