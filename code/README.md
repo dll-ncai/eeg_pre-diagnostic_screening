@@ -1,4 +1,4 @@
-# EEG classificaion
+# EEG classification
 This code is released with NMT and uses braindecode to test generalization of CNN on EEG anomaly detection as discussed in 
 The NMT Scalp EEG Dataset: An Open-Source Annotated Dataset of Healthy and Pathological EEG Recordings for Predictive Modeling
 ## Requirements
