@@ -9,8 +9,10 @@
  The expeiments use NMT dataset for EEG classification using models based on Deep and Shallow CNN architechtures proposed by 
   R. T. Schirrmeister et al in `Deep  learning  with  convolutional  neural  networks  for  EEG  decodingand  visualization`
 ## Run
-1. Modify config.py, especially correct data folders for your dataset.
-2. Run with `python ./auto_diagnosis.py`
-3. Run with `python ./finetune.py` after adding path to model(pre-trained on TUH)
+1. Download and unzip dataset in working directory
+2. Install braindecode library available at  https://robintibor.github.io/braindecode/
+3. Modify config.py, especially correct data folders for the dataset.
+4. Run with `python ./auto_diagnosis.py`
+5. Run with `python ./finetune.py` after adding path to model(pre-trained on TUH)
 ##
 [1] R. Schirrmeister, L. Gemein, K. Eggensperger, F. Hutter and T. Ball, "Deep learning with convolutional neural networks for decoding and visualization of EEG pathology," 2017 IEEE Signal Processing in Medicine and Biology Symposium (SPMB), Philadelphia, PA, 2017, pp. 1-7, doi: 10.1109/SPMB.2017.8257015.
