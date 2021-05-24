@@ -115,9 +115,8 @@ def readDatafromPath(path):
 			print(matrix.shape)
 		matrix=matrix[:,:,1:]
 	return matrix.astype('float32')
-
 print('starting')
-normal_eval = readDatafromPath(path = "normal/train")
+normal_eval = readDatafromPath(path = "normal/eval")
 normal_eval_dim = normal_eval.shape[-1]
 # print("normal original dim")
 # print(normal_eval_dim)
@@ -125,7 +124,7 @@ normal_eval_zeros = np.zeros(normal_eval_dim)
 # print("zeros array dim")
 # print(normal_eval_zeros)
 
-abnormal_eval = readDatafromPath(path = "abnormal/train")
+abnormal_eval = readDatafromPath(path = "abnormal/eval")
 abnormal_eval_dim = abnormal_eval.shape[-1]
 #print(abnormal_eval_dim)
 abnormal_eval_ones = np.ones(abnormal_eval_dim)
@@ -138,17 +137,9 @@ eval_data = np.swapaxes(eval_data,0,2)
 
 bs,t,f = eval_data.shape
 
-
-print(eval_data.shape)
-print(eval_label.shape)
-print(eval_data.dtype)
-print(eval_label.dtype)
 enc_labels = to_categorical(eval_label, num_classes=2)
 eval_label= enc_labels
-print(eval_data.shape)
-print(eval_label.shape)
-print(eval_data.dtype)
-print(eval_label.dtype)
+
 
 print('testing')
 # load the saved accuracy model
