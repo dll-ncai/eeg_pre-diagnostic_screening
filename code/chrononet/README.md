@@ -1,7 +1,7 @@
 
 # Chrononet: RNN based classifier 
-The code in this folder contains an implementation of the Chrononet architecture proposed by Subhrajit et. Al in [1]. 
 The experiment test generalizability of deep learning model on NMT dataset.
+The code in this folder contains an implementation of the Chrononet architecture proposed by Subhrajit et. Al in [1]. 
 ## Run
 1. Modify data directory in `config.py`
 2. Run `python ./chrono.py` to augument data and train model 
