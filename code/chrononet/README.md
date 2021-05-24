@@ -3,9 +3,9 @@
 The code in this folder contains an implementation of the Chrononet architecture proposed by Subhrajit et. Al in [1]. 
 The experiment test generalizability of deep learning model on NMT dataset.
 ## Run
-1. Modify data directory in config.py
-2. chrono.py auguments data and train model 
-3. evalchrono.py loads stored model for evaluation 
+1. Modify data directory in `config.py`
+2. Run `python ./chrono.py` to augument data and train model 
+3. Run `python ./evalchrono.py` loads stored model for evaluation 
 ##
 
 ## Acknowledgement
