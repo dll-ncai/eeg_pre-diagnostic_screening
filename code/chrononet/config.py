@@ -1,3 +1,3 @@
 # Dataset folder path 
-normaldir = "normal/train"
-abnormaldir= "abnormal/train"
+normaldir = "dataset/normal/train"
+abnormaldir= "dataset/abnormal/train"
