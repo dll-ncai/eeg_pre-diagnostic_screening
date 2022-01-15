@@ -1,5 +1,5 @@
 =============================================================================
-            The NMT EEG Scalp EEG Dataset
+            #The NMT EEG Scalp EEG Dataset
 
 Code Available at: https://github.com/dll-ncai/eeg_pre-diagnostic_screening
 Dataset available at: https://dll.seecs.nust.edu.pk/downloads/
