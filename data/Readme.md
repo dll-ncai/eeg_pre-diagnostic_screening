@@ -1,33 +1,7 @@
   **The NMT EEG Scalp EEG Dataset**
-=============================================================================
+====================================================================================================
     
-Code Available at: https://github.com/dll-ncai/eeg_pre-diagnostic_screening
-<br />
-Dataset available at: https://dll.seecs.nust.edu.pk/downloads/
-<br />
-@ARTICLE{10.3389/fnins.2021.755817,
-  
-AUTHOR={Khan, Hassan Aqeel and Ul Ain, Rahat and Kamboh, Awais Mehmood and Butt, Hammad Tanveer and Shafait, Saima and Alamgir, Wasim and Stricker, Didier and Shafait, Faisal}, <br />
-TITLE={The NMT Scalp EEG Dataset: An Open-Source Annotated Dataset of Healthy and Pathological EEG Recordings for Predictive Modeling},      
-	
-JOURNAL={Frontiers in Neuroscience},      
-	
-VOLUME={15},      
-	
-YEAR={2022},      
-	  
-URL={https://www.frontiersin.org/article/10.3389/fnins.2021.755817},       
-	
-DOI={10.3389/fnins.2021.755817}, 
 
-ISSN={1662-453X}
-
-}
-
-<br />
-Last Updated: 01-01-2022	
-
-=============================================================================
 
 The EEG records are available in the open-source EDF format. Below is a description of the 
 of the files and the directory structure of this dataset.
@@ -72,3 +46,35 @@ contains all normal EEG records that were used for training purposes in all our 
 	2. `'normal/eval'` which contains all normal EEG records that were used for evaluating/testing
 performance of all algorithms discussed in our paper.
 
+
+===============================================================================
+<br/>
+Code Available at: https://github.com/dll-ncai/eeg_pre-diagnostic_screening
+<br />
+Dataset available at: https://dll.seecs.nust.edu.pk/downloads/
+<br />
+```console
+@ARTICLE{10.3389/fnins.2021.755817,
+  
+author={Khan, Hassan Aqeel and Ul Ain, Rahat and Kamboh, Awais Mehmood and Butt, Hammad Tanveer and Shafait, Saima and Alamgir, Wasim and Stricker, Didier and Shafait, Faisal},   
+	 
+title={The NMT Scalp EEG Dataset: An Open-Source Annotated Dataset of Healthy and Pathological EEG Recordings for Predictive Modeling},      
+	
+journal={Frontiers in Neuroscience},      
+	
+volume={15},      
+	
+year={2022},      
+	  
+url={https://www.frontiersin.org/article/10.3389/fnins.2021.755817},       
+	
+doi={10.3389/fnins.2021.755817},      
+	
+issn={1662-453X},
+
+Keywords = { open-source EEG dataset, automated EEG analytics, pre-diagnostic EEG screening, computer aided diagnosis, computational neurology, convolutional neural networks, deep learning, generalization performance}
+}
+```
+
+<br />
+Last Updated: 01-01-2022	
