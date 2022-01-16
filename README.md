@@ -17,15 +17,15 @@ This repo contains the source code for 'Pre-Diagnostic Screening of Abnormal EEG
 # Dataset
 The NMT dataset consists of 2,417 EEG records at this time. The EEG montage used for recordings consists of the standard 10-20 system and is shown in Figure below.
 <br/>
-<img src="Linked-ear-referenced-standard-electrode-montage_W640.jpg" alt="Linked-ear-referenced-standard-electrode-montage" width="400"/>
+<img src="/media/Linked-ear-referenced-standard-electrode-montage_W640.jpg" alt="Linked-ear-referenced-standard-electrode-montage" width="400"/>
 <br/>
 There are 19 channels on the scalp, channels A1 and A2 are reference channels on auricle of the ear. The sampling rate of all channels is 200 Hz. The average duration of each record is 15 min. The histogram of recording lengths is given in Figure below.
 <br/>
-<img src="The-number-of-recordings-in-the-NMT-dataset-for-each-range-of-duration-in-minutes_W640.jpg" alt="The-number-of-recordings-in-the-NMT-dataset-for-each-range-of-duration-in-minutes" width="400"/>
+<img src="/media/The-number-of-recordings-in-the-NMT-dataset-for-each-range-of-duration-in-minutes_W640.jpg" alt="The-number-of-recordings-in-the-NMT-dataset-for-each-range-of-duration-in-minutes" width="400"/>
 <br/>
 The histograms of age distributions of males and female subjects in the dataset are shown in Figure below.
 <br/>
-<img src="Histogram-of-age-distribution-in-the-NMT-dataset-The-shaded-regions-indicate-the_W640.jpg" alt="Histogram-of-age-distribution-in-the-NMT-dataset" width="400"/>
+<img src="/media/Histogram-of-age-distribution-in-the-NMT-dataset-The-shaded-regions-indicate-the_W640.jpg" alt="Histogram-of-age-distribution-in-the-NMT-dataset" width="400"/>
 <br/>
 The age ranges from under 1 year old up to 90 years old; 66.56 and 33.44% of the records are collected from male and female subjects, respectively. 16.17% of EEG recordings from males are abnormal/pathological whereas, in case of females, 19.18% records are abnormal/pathological.
 
