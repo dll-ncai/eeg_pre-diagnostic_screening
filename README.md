@@ -5,7 +5,7 @@
 * [Dataset](#dataset)
 * [Citation](#citation)
  # Introduction
-This repo contains the source code for 'Pre-Diagnostic Screening of Abnormal EEG' using **"NMT Scalp EEG Dataset"**. The study compares the performance of state-of-the-art deep learning algorithms on the task of EEG abnormality classification on the NMT and Temple Univeristy Hospital (TUH) Abnormal EEG dataset. The details of our research on pre-diagnostic anomaly detection can be found in the following paper:
+This repo contains the source code for 'Pre-Diagnostic Screening of Abnormal EEG' using **"NMT Scalp EEG Dataset"**. The study compares the performance of state-of-the-art deep learning algorithms on the task of EEG abnormality classification on the NMT and Temple Univeristy Hospital (TUH) Abnormal EEG dataset. The NMT dataset is available under the [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) **license** The details of our research on pre-diagnostic anomaly detection can be found in the following paper:
 
 * Hassan Aqeel Khan, Rahat Ul Ain, Awais Mehmood Kamboh, Hammad Tanveer Butt, Saima Shafait, Wasim Alamgir, Didier Stricker and Faisal Shafait (2022) **"The NMT Scalp EEG Dataset: An Open-Source Annotated Dataset of Healthy and Pathological EEG Recordings for Predictive Modeling",** Frontiers in Neuroscience. doi: 10.3389/fnins.2021.755817
 
